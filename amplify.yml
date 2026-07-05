@@ -1,0 +1,13 @@
+version: 1
+
+frontend:
+  phases:
+    build:
+      commands:
+        - test -f website-deployed/index.html
+        - test -d website-deployed/assets
+        - test -d website-deployed/images
+  artifacts:
+    baseDirectory: website-deployed
+    files:
+      - '**/*'
