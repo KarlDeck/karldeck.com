@@ -27,7 +27,12 @@ early if the production entry point or its main asset directories are missing.
 From the repository root, run:
 
 ```sh
-python3 -m http.server 8000 --directory website-deployed
+npm run dev
 ```
 
-Then open <http://localhost:8000>.
+Then open <http://localhost:8000>. Keep the command running while you use the
+preview; stop it with `Ctrl+C`.
+
+The preview command serves `website-deployed/`, listens on all local interfaces,
+and respects a `PORT` environment variable when a preview environment provides
+one. It uses Python's built-in static server and does not install any packages.
